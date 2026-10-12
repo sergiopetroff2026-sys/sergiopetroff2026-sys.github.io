@@ -139,7 +139,7 @@
     .hero-bottom{grid-column:1/13}
     .hero-photo{max-width:none;margin-left:0}
     .hero h1{font-size:clamp(22px,6.4vw,28px)}
-    .hero h1 .script{font-size:clamp(17px,4.9vw,22px);margin-left:0}
+    .hero h1 .script{font-size:clamp(17px,4.9vw,22px);margin:2px 0 12px}
     .hero h1 .tail{white-space:normal}
     .hero-sub{margin-top:26px;font-size:15px}
     .hero-cta-row{margin-top:30px}
@@ -157,7 +157,8 @@
   .facts-in .v{font-family:'Prata',serif;font-size:19px}
   @media(max-width:900px){
     .facts-in{grid-template-columns:repeat(2,1fr)}
-    .facts-in div{padding:20px;border-bottom:1px solid var(--line)}
+    .facts-in div{padding:20px 16px;border-bottom:1px solid var(--line)}
+    .facts-in .v{font-size:16.5px}
     .facts-in div:nth-child(2n){border-right:none}
     .facts-in div:nth-child(3),.facts-in div:nth-child(4){border-bottom:none}
   }
@@ -193,7 +194,7 @@
   }
   .cmp-verdict{
     margin-top:64px;padding:34px 0 0;border-top:1px solid var(--line);
-    display:grid;grid-template-columns:repeat(12,1fr);gap:12px 24px;align-items:baseline;
+    display:grid;grid-template-columns:repeat(12,1fr);gap:12px 24px;align-items:center;
   }
   .cmp-verdict .script{grid-column:1/4;font-size:clamp(30px,3vw,42px)}
   .cmp-verdict p{grid-column:4/12;font-family:'Prata',serif;font-size:clamp(17px,1.7vw,22px);line-height:1.5;color:var(--ink)}
@@ -241,8 +242,8 @@
   .svc-group h3{font-family:'Prata',serif;font-weight:400;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);padding-bottom:16px}
   .svc-row{display:grid;grid-template-columns:repeat(12,1fr);gap:4px 24px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);transition:background .35s,padding-left .35s}
   .svc-row:hover{background:var(--paper-deep);padding-left:14px}
-  .svc-row .nm{grid-column:1/9;font-size:15.5px}
-  .svc-row .nm .script{color:var(--gold-deep);margin-right:10px;font-size:19px}
+  .svc-row .nm{grid-column:1/9;font-size:15.5px;position:relative;padding-left:30px}
+  .svc-row .nm .script{color:var(--gold-deep);font-size:19px;position:absolute;left:0;top:-2px}
   .svc-row .pr{grid-column:9/13;text-align:right;font-family:'Prata',serif;font-size:18px;white-space:nowrap}
   .svc-row .pr small{font-family:'Montserrat',sans-serif;font-size:11px;color:var(--ink-faint);letter-spacing:.1em;margin-right:6px}
   @media(max-width:700px){
@@ -526,7 +527,7 @@
   <div class="wrap">
     <span>Блинов Сергей Викторович · юридические услуги</span>
     <span>+7 963 728-88-89 · @sovetnik1</span>
-    <a href="politika.html">Политика обработки персональных данных</a>
+    <a href="https://sergiopetroff2026-sys.github.io/politika.html">Политика обработки персональных данных</a>
   </div>
 </footer>
 
