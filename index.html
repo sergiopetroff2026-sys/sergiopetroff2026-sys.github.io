@@ -116,26 +116,28 @@
   }
   .hero-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:center;position:relative}
   .hero-left{grid-column:1/7}
-  .hero-right{grid-column:8/13;grid-row:1/4;align-self:start;margin-top:-118px}
+  .hero-right{grid-column:8/13;grid-row:1/4;align-self:stretch;margin-top:-118px}
   .hero-bottom{grid-column:1/7}
   .hero h1{font-family:'Prata',serif;font-weight:400;font-size:clamp(38px,4.6vw,62px);line-height:1.1;letter-spacing:.005em}
   .hero h1 .tail{white-space:nowrap}
   .hero h1 .script{display:block;font-size:clamp(50px,6.4vw,96px);color:var(--gold-deep);line-height:1.05;margin:6px 0 2px -4px}
   .hero-sub{max-width:520px;margin-top:30px;color:var(--ink-soft);font-size:16px;font-weight:400}
   .hero-cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:40px}
-  .hero-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;text-decoration:none;color:#3a2f08;background:linear-gradient(100deg,#c79a1d 0%,#ffd700 25%,#fff6c9 50%,#ffd700 75%,#c79a1d 100%);background-size:220% auto;animation:goldflow 4.5s linear infinite;box-shadow:0 10px 26px rgba(199,154,29,.35);padding:18px 32px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;transition:transform .35s,box-shadow .35s;border-radius:12px}
+  .hero-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;text-decoration:none;color:#fff;background:linear-gradient(100deg,#9a740f 0%,#d9a920 30%,#eccd5f 50%,#d9a920 70%,#9a740f 100%);background-size:220% auto;animation:goldflow 4.5s linear infinite;box-shadow:0 10px 26px rgba(199,154,29,.35);padding:18px 32px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;transition:transform .35s,box-shadow .35s;border-radius:12px}
   .hero-cta:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(199,154,29,.45)}
   .hero-cta.ghost{background:rgba(255,255,255,.14);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(217,179,44,.45)}
   .hero-cta.ghost:hover{background:rgba(255,255,255,.3);color:var(--graphite)}
-  .hero-photo{position:relative;max-width:320px;margin-left:auto}
-  .hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:2px}
+  .hero-photo{position:relative;max-width:none;height:100%;margin-left:auto}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:12px;border:6px solid #fff;box-shadow:0 0 0 1px var(--gold-deep),0 24px 48px rgba(30,33,36,.14)}
   .hero-photo figcaption{margin-top:14px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
   .hero-photo figcaption .nm{font-family:'Prata',serif;font-size:16px}
   .hero-photo figcaption .rl{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-faint)}
   @media(max-width:900px){
     .hero{padding-top:104px;min-height:0}
     .hero-left{grid-column:1/7}
-    .hero-right{grid-column:7/13;grid-row:auto;margin-top:-88px}
+    .hero-right{grid-column:7/13;grid-row:auto;margin-top:-88px;align-self:start}
+    .hero-photo{height:auto}
+    .hero-photo img{height:auto;aspect-ratio:4/5;border-width:4px}
     .hero-bottom{grid-column:1/13}
     .hero-photo{max-width:none;margin-left:0}
     .hero h1{font-size:clamp(22px,6.4vw,28px)}
@@ -196,7 +198,7 @@
     margin-top:64px;padding:34px 0 0;border-top:1px solid var(--line);
     display:grid;grid-template-columns:repeat(12,1fr);gap:12px 24px;align-items:center;
   }
-  .cmp-verdict .script{grid-column:1/4;font-size:clamp(30px,3vw,42px)}
+  .cmp-verdict .script{grid-column:1/4;font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;line-height:1.5}
   .cmp-verdict p{grid-column:4/12;font-family:'Prata',serif;font-size:clamp(17px,1.7vw,22px);line-height:1.5;color:var(--ink)}
   @media(max-width:900px){.cmp-verdict .script,.cmp-verdict p{grid-column:1/13}}
 
@@ -204,7 +206,7 @@
   .why-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:48px 24px;position:relative}
   .why-lead{grid-column:1/6}
   .why-list{grid-column:7/13;display:grid;grid-template-columns:1fr 1fr;gap:0 32px;align-content:start}
-  .why-lead .script{font-size:clamp(40px,4vw,56px);line-height:1.1}
+  .why-lead .script{font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;line-height:1.4}
   .why-lead .lead-text{font-family:'Prata',serif;font-size:clamp(17px,1.7vw,22px);line-height:1.55;color:var(--ink);margin:20px 0 38px}
   .why-price{border-top:1px solid var(--gold);padding-top:24px}
   .why-price .t{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
@@ -257,6 +259,7 @@
 
   /* ---------- кейсы ---------- */
   .case-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .case .case-num{display:block;font-family:'Prata',serif;font-size:30px;color:var(--gold-deep);opacity:.85;margin-bottom:14px}
   .case{padding:36px 28px 42px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .4s}
   .case:hover{background:var(--paper-deep)}
   .cases-note{margin-top:34px;font-size:13px;font-weight:400;color:var(--ink-faint);max-width:640px}
@@ -283,7 +286,7 @@
   .ct-right{grid-column:7/13;text-align:center}
   .qr-title{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:16px}
   .price-note{grid-column:1/-1;align-self:start;margin-top:6px;font-size:13px;font-weight:400;color:var(--ink-faint);max-width:720px}
-  .pay-card{background:#fff;padding:34px 30px;border-radius:10px;border:1px solid var(--line);box-shadow:0 8px 22px rgba(30,33,36,.08);text-align:center}
+  .pay-card{background:#fff;padding:34px 30px;border-radius:12px;border:1px solid var(--line);border-top:3px solid var(--gold-deep);box-shadow:0 8px 22px rgba(30,33,36,.08);text-align:center}
   .pay-text{font-size:14px;font-weight:400;color:var(--ink-soft);margin:0 0 22px}
   .pay-btn{display:inline-block;padding:16px 28px;background:linear-gradient(135deg,#a87f10,#e0b82e 55%,#a87f10);color:#fff;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:12px}
   .contact .script{font-size:clamp(40px,5vw,64px);display:block;margin-bottom:18px}
@@ -372,16 +375,19 @@
     </div>
     <div class="case-grid">
       <div class="case rv">
+        <span class="case-num">01</span>
         <h3>Залив квартиры по вине УК</h3>
         <p class="case-stage"><b>Ситуация.</b> Квартиру затопило из-за прорыва общедомового стояка. Управляющая компания вину не признаёт и перекладывает её на «соседей сверху», а возмещение предлагает ждать месяцами.</p>
         <p class="case-stage"><b>Как я действую.</b> Фиксируем залив актом, проводим независимую оценку ущерба, направляем мотивированную претензию. Доказываем: стояк — общедомовое имущество, его состояние — зона ответственности УК.</p>
       </div>
       <div class="case rv">
+        <span class="case-num">02</span>
         <h3>Защита чести и достоинства</h3>
         <p class="case-stage"><b>Ситуация.</b> В чатах и соцсетях о человеке распространяют порочащие сведения — например, публичные обвинения в мошенничестве. Страдает репутация, начинаются проблемы на работе.</p>
         <p class="case-stage"><b>Как я действую.</b> Нотариально фиксируем публикации, собираем доказательства недостоверности сведений и их порочащего характера, готовим иск о защите чести, достоинства и деловой репутации.</p>
       </div>
       <div class="case rv">
+        <span class="case-num">03</span>
         <h3>Трудовой спор</h3>
         <p class="case-stage"><b>Ситуация.</b> Работника увольняют «по сокращению», пока он на больничном, или оформляют увольнение с нарушением процедуры.</p>
         <p class="case-stage"><b>Как я действую.</b> Обжалуем приказ, доказываем нарушение процедуры и отсутствие реального сокращения, ставим вопрос о восстановлении на работе и взыскании зарплаты за время вынужденного прогула.</p>
